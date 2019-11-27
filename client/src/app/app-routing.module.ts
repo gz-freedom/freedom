@@ -13,19 +13,23 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { title: 'Home' }
   },
   {
     path: 'run',
-    component: RunComponent
+    component: RunComponent,
+    data: { title: 'Run' }
   },
   {
     path: 'read',
-    component: ReadComponent
+    component: ReadComponent,
+    data: { title: 'Read' }
   },
   {
     path: 'wealth',
-    component: WealthComponent
+    component: WealthComponent,
+    data: { title: 'Wealth' }
   }
 ];
 

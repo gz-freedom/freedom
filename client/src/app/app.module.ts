@@ -7,6 +7,7 @@ import { WealthComponent } from './wealth/wealth.component';
 import { HomeComponent } from './home/home.component';
 import { RunComponent } from './run/run.component';
 import { ReadComponent } from './read/read.component';
+import { LotteryComponent } from './wealth/lottery/lottery.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ReadComponent } from './read/read.component';
     WealthComponent,
     HomeComponent,
     RunComponent,
-    ReadComponent
+    ReadComponent,
+    LotteryComponent
   ],
   imports: [
     BrowserModule,
