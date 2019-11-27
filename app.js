@@ -2,9 +2,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+mongoose.connect('mongodb://localhost/freedom', {
+    promiseLibrary: require('bluebird'),
+    useCreateIndex: true,
+    useFindAndModify: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => console.log("database connect successfully."))
+.catch(err => console.log(err));
 
 var app = express();
 
