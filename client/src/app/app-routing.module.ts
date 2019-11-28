@@ -4,6 +4,7 @@ import { HomeComponent } from "./home/home.component";
 import { RunComponent } from "./run/run.component";
 import { ReadComponent } from "./read/read.component";
 import { WealthComponent } from "./wealth/wealth.component";
+import { LotteryComponent } from "./wealth/lottery/lottery.component";
 
 const routes: Routes = [
   {
@@ -29,7 +30,13 @@ const routes: Routes = [
   {
     path: 'wealth',
     component: WealthComponent,
-    data: { title: 'Wealth' }
+    data: { title: 'Wealth' },
+    children: [
+      {
+        path: 'lottery',
+        component: LotteryComponent
+      }
+    ]
   }
 ];
 
