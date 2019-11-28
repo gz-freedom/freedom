@@ -10,9 +10,9 @@ router.get('/lottery', function(req, res, next) {
 });
 
 router.post('/lottery', function(req, res, next) {
-  Lottery.create(req.body, function(err, lottery) {
+  Lottery.insertMany(req.body, function(err, lotteries) {
     if(err) next(err);
-    res.json(lottery);
+    res.json(lotteries);
   });
 });
 

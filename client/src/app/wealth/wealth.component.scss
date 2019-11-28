@@ -4,6 +4,7 @@
     bottom: 0;
     width: 40px;
     overflow: hidden;
+    z-index: 9;
 
     .nav-link {
         white-space: nowrap;
@@ -31,5 +32,5 @@
 }
 
 .main-content {
-    padding-left: 50px;
+    padding-left: 40px;
 }

@@ -1,0 +1,74 @@
+.list-container {
+  padding: 10px;
+}
+.lottery-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  width: 1383px;
+
+  .header, .data-row {
+      overflow: hidden;
+  }
+
+  .header {
+      color: #fff;
+      border-top: #000 solid 1px;
+
+      .expect,
+      .cube-header {
+          background-color: #666;
+      }
+  }
+
+  .expect {
+      width: 60px;
+      border: #000 solid 1px;
+      border-top: none;
+      height: 27px;
+      float: left;
+  }
+
+  .cube {
+      width: 27px;
+      height: 27px;
+      line-height: 27px;
+      border: #000 solid 1px;
+      border-left: none;
+      border-top: none;
+      float: left;
+      color: #fff;
+
+      .num {
+          font-weight: normal;
+          display: none;
+      }
+  }
+  .data-row [hover='true'] {
+      background-color: #ddd;
+      .num {
+          display: block;
+      }
+  }
+  .data-row:hover {
+      .expect, .cube {
+          background-color: #ddd;
+      }
+      .active .num {
+          display: block;
+      }
+  }
+  .hover {
+      background-color: #ddd;
+  }
+
+  .red-cube.active {
+      background-color: red !important;
+  }
+  .blue-cube.active {
+      background-color: blue !important;
+  }
+}

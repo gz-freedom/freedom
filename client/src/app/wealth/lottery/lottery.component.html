@@ -1,1 +1,37 @@
-<p>lottery works!</p>
+<div class="lottery-container">
+  <div class="btn-group btn-group-sm mt-2 ml-2" role="group">
+    <button type="button" class="btn btn-link" (click)="getLotteries(20)">获取最新20条数据</button>
+    <button type="button" class="btn btn-link" (click)="getLotteries(10)">获取最新10条数据</button>
+    <button type="button" class="btn btn-link" (click)="getLotteries(5)">获取最新5条数据</button>
+    <button type="button" class="btn btn-link" (click)="getLotteries(1)">获取最新1条数据</button>
+  </div>
+  <div class="list-container">
+    <ul class="lottery-list">
+      <li class="header">
+        <span class="expect">期数</span>
+        <span class="cube cube-header" *ngFor="let d of arr(33); let n = index">{{ n + 1 }}</span>
+        <span class="cube cube-header" *ngFor="let d of arr(16); let n = index">{{ n + 1 }}</span>
+      </li>
+      <li class="data-row" *ngFor="let data of allLotteries">
+        <span class="expect">{{ data.expect }}</span>
+        <span class="cube red-cube" attr.idx="{{ n }}" *ngFor="let code of arr(33); let n=index" [ngClass]="{ 'active': data.redcode.indexOf(n+1) !== -1 }">
+            <b class="num" *ngIf="data.redcode.indexOf(n+1) !== -1">{{ n + 1 }}</b>
+        </span>
+        <span class="cube blue-cube" attr.idx="{{ 33 + n }}" *ngFor="let code of arr(16); let n=index" [ngClass]="{ 'active': data.bluecode === n + 1 }">
+            <b class="num" *ngIf="data.bluecode === n + 1">{{ n + 1 }}</b>
+        </span>
+      </li>
+
+      <!-- my lottery -->
+      <li class="data-row">
+        <span class="expect">{{ myLottery.expect }}</span>
+        <span class="cube red-cube" attr.idx="{{ n }}" *ngFor="let code of arr(33); let n=index" [ngClass]="{ 'active': myLottery.redcode.indexOf(n+1) !== -1 }">
+            <b class="num" *ngIf="myLottery.redcode.indexOf(n+1) !== -1">{{ n + 1 }}</b>
+        </span>
+        <span class="cube blue-cube" attr.idx="{{ 33 + n }}" *ngFor="let code of arr(16); let n=index" [ngClass]="{ 'active': myLottery.bluecode === n + 1 }">
+            <b class="num" *ngIf="myLottery.bluecode === n + 1">{{ n + 1 }}</b>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
