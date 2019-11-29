@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="card">
+        <h5 class="card-header">配速计算</h5>
+        <div class="card-body">
+            <div class="calc-box">
+                <div class="form-group">
+                  <label for="distance">距离</label>
+                  <div class="input-group mb-2 mr-sm-2">
+                    <input type="text" class="form-control" id="distance">
+                    <div class="input-group-append">
+                      <div class="input-group-text">公里</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="hour">时间</label>
+                  <div class="row">
+                    <div class="input-group col-4 mb-2">
+                      <input type="text" class="form-control" id="hour">
+                      <div class="input-group-append">
+                        <div class="input-group-text">时</div>
+                      </div>
+                    </div>
+                    <div class="input-group col-4 mb-2">
+                      <input type="text" class="form-control" id="minute">
+                      <div class="input-group-append">
+                        <div class="input-group-text">分</div>
+                      </div>
+                    </div>
+                    <div class="input-group col-4 mb-2">
+                      <input type="text" class="form-control" id="second">
+                      <div class="input-group-append">
+                        <div class="input-group-text">秒</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="hour">配速</label>
+                  <div class="row">
+                    <div class="input-group col-6 mb-2">
+                      <input type="text" class="form-control" id="pace-minute">
+                      <div class="input-group-append">
+                        <div class="input-group-text">分</div>
+                      </div>
+                    </div>
+                    <div class="input-group col-6 mb-2">
+                      <input type="text" class="form-control" id="pace-second">
+                      <div class="input-group-append">
+                        <div class="input-group-text">秒</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="calc()">计算</button>
+            </div>
+        </div>
+    </div>
+</div>

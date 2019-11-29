@@ -1,1 +1,17 @@
-<p>read works!</p>
+<div class="sidebar bg-info">
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="#" [routerLink]="['readlater']" class="nav-link">
+            <i class="far fa-bookmark"></i>
+            <span class="text">收藏夹</span>
+          </a>
+        </li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+      </ul>
+    </div>
+</div>
+<div class="main-content">
+    <router-outlet></router-outlet>
+</div>

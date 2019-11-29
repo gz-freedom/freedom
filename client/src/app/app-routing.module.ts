@@ -5,6 +5,8 @@ import { RunComponent } from "./run/run.component";
 import { ReadComponent } from "./read/read.component";
 import { WealthComponent } from "./wealth/wealth.component";
 import { LotteryComponent } from "./wealth/lottery/lottery.component";
+import { RunToolsComponent } from "./run/run-tools/run-tools.component";
+import { ReadLaterComponent } from "./read/read-later/read-later.component";
 
 const routes: Routes = [
   {
@@ -20,12 +22,29 @@ const routes: Routes = [
   {
     path: 'run',
     component: RunComponent,
-    data: { title: 'Run' }
+    data: { title: 'Run' },
+    children: [
+      {
+        path: '',
+        redirectTo: 'tools',
+        pathMatch: 'full'
+      },
+      {
+        path: 'tools',
+        component: RunToolsComponent
+      }
+    ]
   },
   {
     path: 'read',
     component: ReadComponent,
-    data: { title: 'Read' }
+    data: { title: 'Read' },
+    children: [
+      {
+        path: 'readlater',
+        component: ReadLaterComponent
+      }
+    ]
   },
   {
     path: 'wealth',

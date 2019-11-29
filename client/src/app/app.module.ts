@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { RunComponent } from './run/run.component';
 import { ReadComponent } from './read/read.component';
 import { LotteryComponent } from './wealth/lottery/lottery.component';
+import { RunToolsComponent } from './run/run-tools/run-tools.component';
+import { ReadLaterComponent } from './read/read-later/read-later.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { LotteryComponent } from './wealth/lottery/lottery.component';
     HomeComponent,
     RunComponent,
     ReadComponent,
-    LotteryComponent
+    LotteryComponent,
+    RunToolsComponent,
+    ReadLaterComponent
   ],
   imports: [
     BrowserModule,
