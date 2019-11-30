@@ -8,6 +8,7 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var wealthRouter = require('./routes/wealth');
+var readRouter = require('./routes/read');
 
 mongoose.connect('mongodb://localhost/freedom', {
     promiseLibrary: require('bluebird'),
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/wealth', wealthRouter);
+app.use('/read', readRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
