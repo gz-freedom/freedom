@@ -19,6 +19,7 @@ export class ReadLaterComponent implements OnInit {
   ngOnInit() {
     this.addForm = this.formBuilder.group({
       title: [null, Validators.required],
+      description: [null],
       url: [null, Validators.required],
       tags: [null, Validators.required]
     });
@@ -37,7 +38,9 @@ export class ReadLaterComponent implements OnInit {
   }
 
   addRead() {
-    this.api.addRead(this.addForm.value).subscribe(res => {
+    let formValue = this.addForm.value;
+    formValue.tags = formValue.tags.split(",");
+    this.api.addRead(formValue).subscribe(res => {
       console.log(res);
       this.allReads.push(res._body);
     });
